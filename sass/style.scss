@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Colors
+$rainbow: (
+red: #FF0000,
+yellow: #FFFF00,
+green: #00FF00,
+blue: #0000FF,
+turquoise:#40e0d0
+);
+%placeholder {
+    text-align: left;
+    padding: 8px 20px;
+}
+@each $name, $color in $rainbow {
+  .#{$name}{
+    border: 2px solid $color;
+  }
+}
+.app {
+    width: 30%;
+    min-width: 265px;
+    margin: 50px auto;
+}
+form {
+    padding: 10px 0;
+    background-color: rgba(151, 156, 152, 0.21);
+    border-bottom: 2px solid #ffffff;
+    input {
+        width: 100%;
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        &.checkbox {
+            width: 30px;
+            display: inline-block;
+            padding-left: 12px;
+        }
+    }
+    p {
+        padding-left: 12px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    th {
+        @extend %placeholder;
+        background-color: rgb(76, 175, 80);
+        color: white;
+        font-size: 20px;
+        &.category {
+            background-color: rgba(85, 175, 76, 0.67);
+            font-size: 0.95em;
+        }
+    }
+    td {
+        @extend %placeholder;
+        font-size: 0.9em;
+        img:hover {
+            cursor: pointer;
+        }
+    }
+    tr:nth-child(even){background-color: #f2f2f2}
+}
+.catImg {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    &:hover {
+        cursor: pointer;
+    }
+    figcaption{
+        text-align: center;
+        padding-top: 20px;
+        color: white;
+    }
+    .buybtn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .closebtn{
+        background-color: #ffffff;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 20px;
+        border-radius: 50%;
+    }
+}
+.basket{
+    padding-left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .pictureCopy{
+        border-radius: 50%;
+        position: relative;
+        top: 119px;
+        z-index: 1;
+        width: 150px;
+        left: 0px;
+        transition: 
+    }
+    .pictureBasket{
+        position: relative;
+        z-index: 2;
+    }
+}
