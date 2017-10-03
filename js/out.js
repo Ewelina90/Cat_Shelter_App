@@ -9836,7 +9836,7 @@ var CatBasket = function (_React$Component) {
                 _react2.default.createElement(
                     'figure',
                     null,
-                    _react2.default.createElement('img', { src: this.props.picture }),
+                    _react2.default.createElement('img', { className: 'catPicture', src: this.props.picture }),
                     _react2.default.createElement(
                         'figcaption',
                         null,
@@ -9854,7 +9854,7 @@ var CatBasket = function (_React$Component) {
                         _react2.default.createElement(
                             'span',
                             null,
-                            'Kup '
+                            'Adopt'
                         )
                     )
                 )
@@ -10298,9 +10298,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (this.state.clickOff) {
                     return _react2.default.createElement(
                         'div',
-                        { className: 'app' },
-                        _react2.default.createElement(_searchbar2.default, { filterText: this.state.filterText, likesKids: this.state.likesKids, onChange: this.handleBoxCheck, onFilter: this.handleSearchChange }),
-                        _react2.default.createElement(_cattable2.default, { kitties: this.props.kitties, filterText: this.state.filterText, likesKids: this.state.likesKids, onPictureClick: this.handlePictureClick })
+                        { className: 'container' },
+                        _react2.default.createElement(
+                            'h1',
+                            { className: 'title' },
+                            'ADOPT A C',
+                            _react2.default.createElement(
+                                'span',
+                                { style: { color: '#b00e18' } },
+                                'A'
+                            ),
+                            'T'
+                        ),
+                        _react2.default.createElement('img', { style: { width: '40px', display: 'inline-block' }, src: './images/logo.png' }),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'app' },
+                            _react2.default.createElement(_searchbar2.default, { filterText: this.state.filterText, likesKids: this.state.likesKids, onChange: this.handleBoxCheck, onFilter: this.handleSearchChange }),
+                            _react2.default.createElement(_cattable2.default, { kitties: this.props.kitties, filterText: this.state.filterText, likesKids: this.state.likesKids, onPictureClick: this.handlePictureClick })
+                        )
                     );
                 }
             }

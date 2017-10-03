@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #efefef;
 }
 
 // Colors
@@ -14,29 +15,44 @@ green: #00FF00,
 blue: #0000FF,
 turquoise:#40e0d0
 );
-%placeholder {
-    text-align: left;
-    padding: 8px 20px;
-}
+
 @each $name, $color in $rainbow {
   .#{$name}{
     border: 2px solid $color;
   }
 }
+.container {
+    width: 100%;
+    background-image: url('./../images/background_cat.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+     .title {
+        text-align: left;
+        font-family: 'Oswald', sans-serif;
+        font-size: 800%;
+        max-width: none;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 30px 0 10%;
+    }
+}
 .app {
-    width: 30%;
+    width: 50%;
     min-width: 265px;
-    margin: 50px auto;
+    margin: 20px 9%;
 }
 form {
     padding: 10px 0;
-    background-color: rgba(151, 156, 152, 0.21);
     border-bottom: 2px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:  #a9a9a9;
     input {
         width: 100%;
         padding: 10px;
         width: 90%;
-        margin: 0 auto;
+        margin: 10px auto;
         display: block;
         &.checkbox {
             width: 30px;
@@ -52,30 +68,49 @@ form {
 table {
     border-collapse: collapse;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    align: center;
+    box-shadow: 0px 0px 46px 0px rgba(169, 169, 169, 0.4);
     th {
-        @extend %placeholder;
-        background-color: rgb(76, 175, 80);
+        text-align: left;
+        padding: 8px 10%;
+        background-color: #a9a9a9;
         color: white;
         font-size: 20px;
+        width: 30%;
+        &:last-child{
+            text-align: center;
+        }
         &.category {
-            background-color: rgba(85, 175, 76, 0.67);
+            background-color: lighten(#a9a9a9,10%);
             font-size: 0.95em;
+            padding: 8px 10%;
+            text-align: left;
         }
     }
     td {
-        @extend %placeholder;
+        text-align: center;
         font-size: 0.9em;
+        padding: 8px 0;
+        width: 30%;
         img:hover {
             cursor: pointer;
         }
     }
     tr:nth-child(even){background-color: #f2f2f2}
 }
+.catBg {
+    position: absolute;
+    right: 10px;
+    width: 520px;
+    top: 0px;
+    overflow: hidden;
+}
 .catImg {
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    background-color: gray;
+    background-color: #efefef;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,27 +118,42 @@ table {
     &:hover {
         cursor: pointer;
     }
-    figcaption{
-        text-align: center;
-        padding-top: 20px;
-        color: white;
+    figure {
+        width: 40%;
+        min-width: 250px;
+        .catPicture {
+            width: 100%;
+        }
+        figcaption{
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 20px;
+            color: #999;
+        }
     }
     .buybtn {
         display: inline-block;
         border-radius: 4px;
-        background-color: #ffffff;
+        background-color: #999;
         border: none;
-        color: #000000;
+        color: white;
         text-align: center;
-        font-size: 28px;
-        padding: 20px;
+        font-size: 22px;
+        padding: 10px 20px;
         cursor: pointer;
         margin: 5px;
+        &:hover {
+            background-color: darken(#999,10%);
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 6px 0px rgba(169, 169, 169, 0.8);
+        }
     }
     .closebtn{
         background-color: #ffffff;
         border: none;
-        color: #000000;
+        color: #999;
         text-align: center;
         font-size: 15px;
         font-weight: bold;
@@ -114,6 +164,7 @@ table {
         top: 20px;
         right: 20px;
         border-radius: 50%;
+        box-shadow: 0px 0px 6px 0px rgba(169, 169, 169, 0.8);
     }
 }
 .basket{
@@ -125,14 +176,126 @@ table {
     .pictureCopy{
         border-radius: 50%;
         position: relative;
-        top: 119px;
+        top: 60px;
         z-index: 1;
         width: 150px;
         left: 0px;
-        transition: 
+        transition: all 0.2s;
     }
     .pictureBasket{
         position: relative;
         z-index: 2;
+        width: 200px;
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        .title {
+            margin: 0 30px 0 30px;
+        }
+    }
+    .app {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+}
+@media (max-width: 1240px) {
+    .container {
+        background-image: url();
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        .title {
+            margin: 0 30px 0 30px;
+            font-size: 655%;
+        }
+    }
+    .app {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 866px) {
+    .container {
+        background-image: url();
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        .title {
+            margin: 0 30px 0 30px;
+            font-size: 500%;
+        }
+    }
+    .app {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+@media (max-width: 732px){
+    .catImg {
+        flex-direction: column;
+        figure {
+            margin-bottom: 50px;
+        }
+    }
+    .basket {
+        padding: 0;
+        flex-direction: column;
+        padding-left: 0;
+        .pictureCopy{
+            top: 4px;
+            width: 150px;
+            left: 0px;
+        }
+        .pictureBasket{
+            width: 200px;
+            left: 0px;
+            top: -50px;
+        }
+        .buybtn {
+            position: relative;
+            top: -50px;
+            margin: 5px 10%;
+        }
+    }
+
+}
+@media (max-width: 666px) {
+    .container {
+        background-image: url();
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        .title {
+            margin: 0 30px 0 30px;
+            font-size: 400%;
+        }
+    }
+    .app {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+@media (max-width: 509px) {
+    .container {
+        background-image: url();
+        width: 100%;
+        min-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        .title {
+            margin: 0 30px 0 30px;
+            font-size: 300%;
+        }
+    }
+    .app {
+        width: 100%;
+        margin: 20px auto;
     }
 }

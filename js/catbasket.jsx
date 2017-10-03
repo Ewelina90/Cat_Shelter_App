@@ -29,14 +29,14 @@ class CatBasket extends React.Component {
         <div className="catImg">
             <button className="closebtn" onClick={this.handleClickOf}>X</button>
             <figure>
-                <img src={this.props.picture} />
+                <img className="catPicture" src={this.props.picture} />
                 <figcaption>{this.props.currentCatName}</figcaption>
             </figure>
 
             <div className="basket">
                 <img className='pictureCopy' style={{visibility: this.state.hidden}} src={this.state.pictureCopy} />
                 <img className='pictureBasket' src='./images/basket.png' />
-                <button className="buybtn" onClick={this.handleBtnClick}><span>Kup </span></button>
+                <button className="buybtn" onClick={this.handleBtnClick}><span>Adopt</span></button>
             </div>
         </div>
      )

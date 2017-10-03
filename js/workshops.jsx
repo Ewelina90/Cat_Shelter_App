@@ -54,10 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 )
             }else if(this.state.clickOff){
                 return (
-                    <div className="app">
-                        <SearchBar filterText={this.state.filterText} likesKids={this.state.likesKids} onChange={this.handleBoxCheck} onFilter={this.handleSearchChange}/>
-                        <CatTable kitties={this.props.kitties} filterText={this.state.filterText} likesKids={this.state.likesKids} onPictureClick={this.handlePictureClick}/>
+                    <div className="container">
+                        <h1 className="title">ADOPT A C<span style={{color:'#b00e18'}}>A</span>T</h1>
+                        <img style={{width:'40px',display:'inline-block'}} src="./images/logo.png"></img>
+                        <div className="app">
+                            <SearchBar filterText={this.state.filterText} likesKids={this.state.likesKids} onChange={this.handleBoxCheck} onFilter={this.handleSearchChange}/>
+                            <CatTable kitties={this.props.kitties} filterText={this.state.filterText} likesKids={this.state.likesKids} onPictureClick={this.handlePictureClick}/>
+                        </div>
                     </div>
+
                 )
             }
         }
