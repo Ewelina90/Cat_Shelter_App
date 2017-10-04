@@ -9808,15 +9808,7 @@ var CatBasket = function (_React$Component) {
             }
         };
 
-        _this.handleBtnClick = function (event) {
-            event.stopPropagation();
-            _this.setState({
-                hidden: 'visible'
-            });
-        };
-
         _this.state = {
-            pictureCopy: _this.props.picture,
             hidden: 'hidden'
         };
         return _this;
@@ -9841,21 +9833,6 @@ var CatBasket = function (_React$Component) {
                         'figcaption',
                         null,
                         this.props.currentCatName
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'basket' },
-                    _react2.default.createElement('img', { className: 'pictureCopy', style: { visibility: this.state.hidden }, src: this.state.pictureCopy }),
-                    _react2.default.createElement('img', { className: 'pictureBasket', src: './images/basket.png' }),
-                    _react2.default.createElement(
-                        'button',
-                        { className: 'buybtn', onClick: this.handleBtnClick },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'Adopt'
-                        )
                     )
                 )
             );
