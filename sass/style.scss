@@ -23,24 +23,23 @@ turquoise:#40e0d0
 }
 .container {
     width: 100%;
-    background-image: url('./../images/background_cat.png');
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    min-width: 350px;
+    margin: 0 auto;
+    text-align: center;
      .title {
         text-align: left;
         font-family: 'Oswald', sans-serif;
-        font-size: 800%;
         max-width: none;
         font-weight: bold;
         display: inline-block;
-        margin: 0 30px 0 10%;
+        margin: 0 30px 0 30px;
+        font-size: 300%;
     }
 }
 .app {
-    width: 50%;
+    width: 100%;
     min-width: 265px;
-    margin: 20px 9%;
+    margin: 20px auto;
 }
 form {
     padding: 10px 0;
@@ -148,9 +147,38 @@ table {
         box-shadow: 0px 0px 6px 0px rgba(169, 169, 169, 0.8);
     }
 }
-@media (min-width: 1600px) {
+@media (min-width: 666px) {
+    .container {
+        width: 80%;
+        .title {
+            font-size: 400%;
+        }
+    }
+    .app {
+        width: 80%;
+    }
+}
+@media (min-width: 1280px) {
     .container {
         width: 100%;
+        background-image: url('./../images/background_cat.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: left;
+        min-height: 800px;
+        .title {
+            font-size: 800%;
+            margin: 0 30px 0 10%;
+        }
+    }
+    .app {
+        width: 50%;
+        margin: 20px 9%;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
         margin: 0 auto;
         text-align: center;
         .title {
@@ -160,72 +188,6 @@ table {
     .app {
         width: 100%;
         max-width: 800px;
-        margin: 20px auto;
-    }
-}
-@media (max-width: 1240px) {
-    .container {
-        background-image: url();
-        width: 70%;
-        margin: 0 auto;
-        text-align: center;
-        .title {
-            margin: 0 30px 0 30px;
-            font-size: 655%;
-        }
-    }
-    .app {
-        width: 100%;
-        margin: 20px auto;
-    }
-}
-
-@media (max-width: 866px) {
-    .container {
-        background-image: url();
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        .title {
-            margin: 0 30px 0 30px;
-            font-size: 500%;
-        }
-    }
-    .app {
-        width: 100%;
-        margin: 20px auto;
-    }
-}
-@media (max-width: 666px) {
-    .container {
-        background-image: url();
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        .title {
-            margin: 0 30px 0 30px;
-            font-size: 400%;
-        }
-    }
-    .app {
-        width: 100%;
-        margin: 20px auto;
-    }
-}
-@media (max-width: 509px) {
-    .container {
-        background-image: url();
-        width: 100%;
-        min-width: 350px;
-        margin: 0 auto;
-        text-align: center;
-        .title {
-            margin: 0 30px 0 30px;
-            font-size: 300%;
-        }
-    }
-    .app {
-        width: 100%;
         margin: 20px auto;
     }
 }
