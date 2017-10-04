@@ -1,2 +1,2 @@
 # Cat_Shelter_App
-Simple app that filters cat list created after first week of learning React.js
+Simple app where you can filter the data, created with React.js
