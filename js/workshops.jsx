@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const kitties = [
-     {category: "Male", age: "4", likesKids: true, name: "Fidel Catstro", picture:'./images/cat_1.jpg'},
-     {category: "Male", age: "9", likesKids: true, name: "Hairy Potter",picture:'./images/cat_2.jpg'},
-     {category: "Male", age: "2", likesKids: false, name: "Grumpy", picture:'./images/cat_3.jpg'},
-     {category: "Female", age: "1", likesKids: true, name: "Jude Paw", picture:'./images/cat_4.jpg'},
-     {category: "Female", age: "2", likesKids: false, name: "Lucifurr", picture:'./images/cat_5.jpg'},
-     {category: "Female", age: "3", likesKids: true, name: "Meowly Cyrus", picture:'./images/cat_6.jpg'}
+     {category: "Male", age: "4", likesKids: true, name: "Fidel Catstro", picture:'./images/cat_1.jpg', pictureMin:'./images/cat_1_min.jpg'},
+     {category: "Male", age: "9", likesKids: true, name: "Hairy Potter",picture:'./images/cat_2.jpg', pictureMin:'./images/cat_2_min.jpg'},
+     {category: "Male", age: "2", likesKids: false, name: "Grumpy", picture:'./images/cat_3.jpg', pictureMin:'./images/cat_3_min.jpg'},
+     {category: "Female", age: "1", likesKids: true, name: "Jude Paw", picture:'./images/cat_4.jpg', pictureMin:'./images/cat_4_min.jpg'},
+     {category: "Female", age: "2", likesKids: false, name: "Lucifurr", picture:'./images/cat_5.jpg', pictureMin:'./images/cat_5_min.jpg'},
+     {category: "Female", age: "3", likesKids: true, name: "Meowly Cyrus", picture:'./images/cat_6.jpg', pictureMin:'./images/cat_6_min.jpg'}
     ];
 
 ReactDOM.render(

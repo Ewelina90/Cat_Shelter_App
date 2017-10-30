@@ -15,8 +15,8 @@ class CatRow extends React.Component {
 
         return(
             <tr>
-                <td><img style={{width:'30px', height:'30px', borderRadius: '50%' }}
-                    src={this.props.kitty.picture}
+                <td><img style={{borderRadius: '50%' }}
+                    src={this.props.kitty.pictureMin}
                     onClick={e => this.handleImgClick(this.props.kitty.picture ,this.props.kitty.name)}/>
 
                 </td>
