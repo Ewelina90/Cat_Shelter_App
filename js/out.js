@@ -10287,7 +10287,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             ),
                             'T'
                         ),
-                        _react2.default.createElement('img', { style: { width: '40px', display: 'inline-block' }, src: './images/logo.png' }),
+                        _react2.default.createElement('img', { style: { display: 'inline-block' }, src: './images/logo_optimized_min.png' }),
                         _react2.default.createElement(
                             'div',
                             { className: 'app' },
