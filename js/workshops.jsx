@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }else if(this.state.clickOff){
                 return (
                     <div className="container">
-                        <h1 className="title">ADOPT A C<span style={{color:'#b00e18'}}>A</span>T</h1>
+                        <h1 className="title">ADOPT A C<span style={{color:'#b00e19'}}>A</span>T</h1>
                         <img style={{display:'inline-block'}} src="./images/logo_optimized_min.png"></img>
                         <div className="app">
                             <SearchBar filterText={this.state.filterText} likesKids={this.state.likesKids} onChange={this.handleBoxCheck} onFilter={this.handleSearchChange}/>
